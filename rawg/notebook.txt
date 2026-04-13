@@ -1,0 +1,202 @@
+interface Author {
+  name: string;
+  avatar: string;
+  age: number;
+}
+
+const authorJohn: Author = {
+  name: "string",
+  avatar: "string",
+  age: 16,
+};
+
+interface Post {
+  title: string;
+  body: string;
+  tags: string;
+  create_at: Date;
+  author: Author;
+}
+
+const newPost: Post = {
+  title: "string",
+  body: "string",
+  tags: "string",
+  create_at: new Date(),
+  author: authorJohn,
+};
+
+function createPost(post: Post): void {
+  console.log(`Created post: ${post.title} by ${post.author.name}`);
+}
+
+createPost(newPost);
+
+let posts: Post[] = [];
+
+posts.push({
+  body: "12133",
+  author: authorJohn,
+  create_at: new Date(),
+  tags: "1",
+  title: "as",
+});
+console.log(posts);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+type User = [name: string, age: number];
+
+let user: User;
+
+user = ["John", 25];
+
+type ColorRGB = [red: number, green: number, blue: number];
+
+const orange: ColorRGB = [255, 26, 64];
+
+function getRandomColor(): ColorRGB {
+  const r = Math.floor(Math.random() * 245);
+  const g = Math.floor(Math.random() * 245);
+  const b = Math.floor(Math.random() * 245);
+
+  return [r, g, b];
+}
+
+console.log(getRandomColor());
+
+
+type Player = {
+  name: string;
+  score: number;
+};
+
+const playerOne: Player = {
+  name: "John",
+  score: 999,
+};
+
+function printPlayer_Info(player: Player): void {
+  console.log(`${player.name} has ${player.score} score`);
+}
+
+printPlayer_Info(playerOne);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+type Id = number | string;
+
+let userId: Id;
+
+userId = "";
+userId = 99;
+
+function changeTypeId(id: Id): Id {
+  //   +id;
+
+  return Number(id);
+}
+
+console.log(changeTypeId("2"));
+///////////////////////////////////////////////////////////////////////////////////
+type Status = "todo" | "in-progress" | "done";
+
+interface Task {
+  id: number;
+  title: string;
+  status?: Status;
+}
+
+const tasks: Task[] = [
+  { id: 1, title: "Shoping", status: "done" },
+  { id: 2, title: "Sleeping", status: "in-progress" },
+  { id: 3, title: "Working", status: "todo" },
+  { id: 4, title: "Gym" },
+];
+
+function filterTasksByStatus(
+  tasksList: Task[] = tasks,
+  transStatus: Status,
+): Task[] {
+  return tasksList.filter((a) => a?.status == transStatus);
+}
+
+const filterTasksByStatus_ = filterTasksByStatus(tasks, "done");
+console.log(filterTasksByStatus_);
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+type Id = number | string;
+
+let userId: Id;
+
+userId = "";
+userId = 99;
+
+function changeTypeId(id: Id): Id {
+  //   +id;
+
+  return Number(id);
+}
+
+console.log(changeTypeId("2"));
+
+interface User {
+  type: "user";
+  username: string;
+  email?: string;
+  id: Id;
+}
+
+interface Person {
+  type: "person";
+  firstname: string;
+  age: number;
+  id: Id;
+}
+
+function logDetails(userInfo: User | Person) {
+  console.log(
+    `This user or person has id ${userInfo.id} and name ${userInfo.type == "person" ? userInfo.firstname : ""} 
+    and a email ${userInfo.type == "user" ? userInfo.email : ""}`,
+  );
+}
+
+logDetails({ type: "user", username: "string", email: "string", id: 34 });
+logDetails({ type: "person", firstname: "string2", age: 22, id: 32 });
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+type Status = "loading" | "success" | "error";
+
+function showNotification(status: Status): string {
+  // Создаем объект, где ключи — это наши статусы
+  const messages: Record<Status, string> = {
+    loading: "Данные загружаются...",
+    success: "Все прошло успешно!",
+    error: "Произошла ошибка!",
+  };
+
+  // Просто возвращаем значение по ключу. Никаких if и тернарников!
+  return messages[status];
+}
+console.log(showNotification("loading"));
+
+
+  // mission.crew.forEach((a) => {
+  //   "experience" in a
+  //     ? [a.experience].forEach((a) => missionExp.push(a))
+  //     : "insuranceLvl" in a
+  //       ? [a.insuranceLvl].forEach((a) => missionExp.push(a))
+  //       : null;
+  // });
+
+  // mission.crew.forEach((a) => {
+  //   if ("experience" in a) [a.experience].forEach((a) => missionExp.push(a));
+  //   else if ("insuranceLvl" in a)
+  //     [a.insuranceLvl].forEach((a) => missionExp.push(a));
+  // });

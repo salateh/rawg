@@ -1,0 +1,21 @@
+{
+  "folders": [
+	{
+		"name": "wwww",
+		"path": "../../.."
+	},
+	{
+		"name": "проекты",
+		"path": "../../../../проекты"
+	},
+	{
+		"path": "../../../../проекты/TrainingProjectOnTS"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "wwww",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 10,
+    "liveServer.settings.port": 5501
+  }
+}
