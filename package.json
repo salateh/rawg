@@ -2,6 +2,9 @@
   "name": "rawg",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'Build completed'"
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
   }
 }
