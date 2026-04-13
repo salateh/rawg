@@ -9,7 +9,7 @@ SPA for searching and browsing games using the RAWG API.
 Built with pure TypeScript, no frameworks.
 
 ## 🚀 Demo
-[https://rawg-qdjh.vercel.app/] — VERCEL
+https://rawg-qdjh.vercel.app/ — VERCEL
 
 ## ✨ Features
 - Game list with pagination
@@ -54,7 +54,7 @@ SPA для поиска и просмотра игр с использовани
 Написано на чистом TypeScript без фреймворков.
 
 ## 🚀 Демо
-[https://rawg-qdjh.vercel.app/] — VERCEL
+https://rawg-qdjh.vercel.app/ — VERCEL
 
 ## ✨ Функционал
 - Список игр с пагинацией
