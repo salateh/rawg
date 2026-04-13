@@ -44,7 +44,7 @@ cd rawg
 
 
 
-#RU
+# RU
 
 # RAWG Game Explorer
 
