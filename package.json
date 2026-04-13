@@ -2,7 +2,7 @@
   "name": "rawg",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && mkdir -p dist/css && cp src/css/style.css dist/css/"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
