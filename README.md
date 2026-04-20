@@ -2,7 +2,6 @@ EN/RU
 
 # EN
 
-https://github.com/salateh/rawg/edit/main/README.md
 # RAWG Game Explorer
 
 SPA for searching and browsing games using the RAWG API.
